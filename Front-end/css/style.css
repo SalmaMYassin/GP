@@ -3,11 +3,14 @@ body {
     background-color: #0683C5 !important;
     /*#5DBCD2*/
 }
-
+@font-face {
+    font-family: game;
+    src: url(../fonts/pcsenior.ttf);
+}
 .section {
     background-color: white;
-    margin-top: 50px;
-    border-radius: 15px;
+    margin-top: 5%;
+    border-radius: 3px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     width: 95% !important;
 }
@@ -116,12 +119,14 @@ body {
     font-weight: 400;
     font-family: 'Raleway', sans-serif;
 }
-
+.changeFont{
+    font-family: 'game', sans-serif;
+}
 .jumbotron .btn {
     float: right;
     margin-top: 25%;
-    width: 20%;
-    right: 21%;
+    width: 15%;
+    right: 24%;
     position: absolute;
 }
 
@@ -170,24 +175,207 @@ body {
 
 }
 
+
+/*Footer*/
+
+
+.footer-bs {
+    background-color: #3c3d41;
+    padding: 60px 40px;
+    color: rgba(255,255,255,1.00);
+    margin-top:  5%;
+    border-bottom-right-radius: 6px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 6px;
+}
+
+
+.footer-bs .footer-brand, .footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { padding:10px 25px; }
+.footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { border-color: transparent; }
+.footer-bs .footer-brand h2 { margin:0px 0px 10px; }
+.footer-bs .footer-brand p { font-size:12px; color:rgba(255,255,255,0.70); }
+
+.footer-bs .footer-nav ul.pages { list-style:none; padding:0px; }
+.footer-bs .footer-nav ul.pages li { padding:5px 0px;}
+.footer-bs .footer-nav ul.pages a { color:rgba(255,255,255,1.00); font-weight:bold; text-transform:uppercase; }
+.footer-bs .footer-nav ul.pages a:hover { color:rgba(255,255,255,0.80); text-decoration:none; }
+.footer-bs .footer-nav h4 {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom:10px;
+}
+
+.footer-bs .footer-nav ul.list { list-style:none; padding:0px; }
+.footer-bs .footer-nav ul.list li { padding:5px 0px;}
+.footer-bs .footer-nav ul.list a { color:rgba(255,255,255,0.80); }
+.footer-bs .footer-nav ul.list a:hover { color:rgba(255,255,255,0.60); text-decoration:none; }
+
+.footer-bs .footer-social ul { list-style:none; padding:0px; }
+.footer-bs .footer-social h4 {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.footer-bs .footer-social li { padding:5px 4px;}
+.footer-bs .footer-social a { color:rgba(255,255,255,1.00);}
+.footer-bs .footer-social a:hover { color:rgba(255,255,255,0.80); text-decoration:none; }
+
+.footer-bs .footer-ns h4 {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom:10px;
+}
+.footer-bs .footer-ns p { font-size:12px; color:rgba(255,255,255,0.70); }
+
+@media (min-width: 768px) {
+    .footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { border-left:solid 1px rgba(255,255,255,0.10); }
+}
+
+
 /**************************************************/
 
 /*            Accounts page                       */
 
 /**************************************************/
 
+/*SIGN IN*/
+
+.signin {
+    background-color: #181818;  
+    height: 80%;
+    width: 70%;
+    margin-top: 21%;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.signin h4{
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    text-align: center;
+    padding: 5em 0 0 0;
+}
+
+/* fontawesome */
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+
+/* Form Layout */
+.signin .form-wrapper {
+    color: white;
+    margin: 3em auto;
+    padding: 0 1em;
+    max-width: 370px;
+}
+
+.signin form {
+    padding: 0 1.5em;
+}
+
+.signin .form-item {
+    margin-bottom: 0.75em;
+    width: 100%;
+}
+
+.signin .form-item input {
+  
+    border: none;
+    border-bottom: 2px solid #e9e9e9;
+    color: #666;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    height: 50px;
+    transition: border-color 0.3s;
+    width: 100%;
+    padding: 20px;
+}
+
+.signin .form-item input:focus {
+    border-bottom: 2px solid #c0c0c0;
+    outline: none;
+
+}
+
+.signin .button-panel {
+    margin: 2em 0 0;
+    width: 100%;
+}
+
+.signin .button-panel .button {
+
+    background: #f16272;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    height: 50px;
+    font-family: 'game', sans-serif;
+    font-size: 1.2em;
+    letter-spacing: 0.01em;
+    text-align: center;
+    text-transform: uppercase;
+    transition: background 0.3s ease-in-out;
+    width: 100%;
+}
+
+.signin .button:hover {
+    background: #ee3e52;
+}
+
+.signin .form-footer {
+    font-size: 1em;
+    padding: 2em 0;
+    text-align: center;
+}
+
+.signin .form-footer a {
+    color: white;
+    text-decoration: none;
+    transition: border-color 0.3s;
+}
+
+.signin .form-footer a:hover {
+    color: #D8D8D8;
+    border-bottom: 1px dotted white;
+}
+
+/*SIGN UP*/
 .signup {
     background-color: white;
     height: 80%;
-    width: 50%;
-    margin-top: 8%;
-    margin-left: 5%;
+    width: 90%;
+    margin-top: 15%;
+    margin-left: 10%;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.signup h3{
+       
+    font-family: 'Raleway', sans-serif;
+    color: black;
+    text-align: center;
+    padding: 2em 0 0 0; 
 }
 
-.lightblue {
-    background-color: white;
-    height: 80%;
-    width: 10%;
-    margin-top: 8%;
-    margin-left: 80%;
+
+.signup form {
+    padding: 0 1.5em;
+}
+
+.signup .button-panel .button {
+
+    background: #f16272;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    height: 50px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2em;
+    letter-spacing: 0.01em;
+    text-align: center;
+    transition: background 0.3s ease-in-out;
+    width: 100%;
 }
