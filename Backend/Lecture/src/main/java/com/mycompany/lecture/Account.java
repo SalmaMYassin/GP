@@ -6,12 +6,14 @@
 package com.mycompany.lecture;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Id;
 import javax.persistence.Persistence;
+import javax.validation.constraints.NotNull;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -37,7 +39,11 @@ public class Account implements Serializable {
     private boolean loggedIn;
     private String email;
     private String name;
+
+    @NotNull
     private String type;
+
+    private String phone;
 
     @javax.persistence.Transient
     EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("lecturepu");
@@ -67,8 +73,43 @@ public class Account implements Serializable {
         } finally {
             entityManager.close();
         }
-
     }
+
+    @POST
+    @Path("/test")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public void test(String test) {
+        System.out.print(test);
+    }
+
+    @GET
+    @Path("/all")
+    public List<Account> allTasks() {
+        List<Account> accounts = new ArrayList<Account>();
+        entityManager.getTransaction().begin();
+        accounts = entityManager.createQuery("SELECT um FROM Account um").getResultList();
+        entityManager.getTransaction().commit();
+        return accounts;
+    }
+
+    @POST
+    @Path("/signin")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public boolean authenticate(String username, String password) {
+        Account acc = entityManager.find(Account.class, username);
+
+        if (acc.getPassword().equals(password)) {
+            entityManager.getTransaction().begin();
+            acc.setLoggedIn(true);
+            entityManager.getTransaction().commit();
+            return true;
+        }
+
+        return false;
+    }
+
 
     public String getUsername() {
         return username;
@@ -84,6 +125,14 @@ public class Account implements Serializable {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public int getAge() {

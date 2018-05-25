@@ -12,7 +12,8 @@ import java.util.ArrayList;
  */
 public class Student extends Account{
     private ArrayList<Integer> enrolledIn;
-  
+    private int score;
+    
     
     
 }

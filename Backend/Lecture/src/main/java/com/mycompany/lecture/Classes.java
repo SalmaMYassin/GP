@@ -15,4 +15,5 @@ public class Classes {
     private String lecturer;
     private ArrayList<Student> students;
     private ArrayList<Lecture> lectures;
+    private ArrayList<String> leaderboard;
 }

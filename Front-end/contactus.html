@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture</title>
+
+    <link rel="shortcut icon" type="image/png" href="imgs/logo3.ico" />
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700i|Slabo+27px" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+
+<body  ng-app="myApp" ng-controller="myCtrl">
+    <!--************** NAVIGATION ******************-->
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-nav-demo" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a href="index.html" class="navbar-brand"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-nav-demo">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li class="active"><a href="contactus.html" class="left">Contact Us</a></li>
+                    <li class="divider-vertical"></li>
+
+                    <li><a href="accounts.html" class="right">Login</a></li>
+
+                    <li><form action="accounts.html"><input type="submit" class="btn navbar-btn btn-info" value="Sign up"></input></form><!-- <button type="button" class="btn navbar-btn btn-info">Sign up</button> --></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!--************** CONTACT US ******************-->
+    <div class="outer container">
+
+    <div class="inner contact">
+        <h2> We'd <i class="fas fa-heart"></i> to Help</h2>
+    
+        <!-- Form Area -->
+        <div class="contact-form">
+            <!-- Form -->
+            <form id="contact-us" method="post" action="#">
+                <!-- Left Inputs -->
+                <div class="col-xs-6 wow animated slideInLeft" data-wow-delay=".5s">
+                    <!-- Name -->
+                    <input type="text" name="name" id="name" required="required" class="form" placeholder="Name" />
+                    <!-- Email -->
+                    <input type="email" name="mail" id="mail" required="required" class="form" placeholder="Email" />
+                    <!-- Subject -->
+                    <input type="text" name="subject" id="subject" required="required" class="form" placeholder="Subject" />
+                </div><!-- End Left Inputs -->
+                <!-- Right Inputs -->
+                <div class="col-xs-6 wow animated slideInRight" data-wow-delay=".5s">
+                    <!-- Message -->
+                    <textarea name="message" id="message" class="form textarea"  placeholder="Message"></textarea>
+                </div><!-- End Right Inputs -->
+                <!-- Bottom Submit -->
+                <div class="relative fullwidth col-xs-12">
+                    <!-- Send Button -->
+                    <button type="submit" id="submit" name="submit" class="form-btn semibold">Send Message</button> 
+                </div><!-- End Bottom Submit -->
+                <!-- Clear -->
+                <div class="clear"></div>
+            </form>
+
+            <!-- Your Mail Message -->
+            <div class="mail-message-area">
+                <!-- Message -->
+                <div class="alert gray-bg mail-message not-visible-message">
+                    <strong>Thank You !</strong> Your email has been delivered.
+                </div>
+            </div>
+
+        </div><!-- End Contact Form Area -->
+    </div><!-- End Inner -->
+</div> 
+<!-- End Outter -->
+
+
+    <!--************** FOOTER ******************-->
+    <footer class="footer-bs">
+        <div class="row">
+            <div class="col-md-3 footer-brand animated fadeInLeft">
+                <h2>Lecture</h2>
+                <p>Suspendisse hendrerit tellus laoreet luctus pharetra. Aliquam porttitor vitae orci nec ultricies. Curabitur vehicula, libero eget faucibus faucibus, purus erat eleifend enim, porta pellentesque ex mi ut sem.</p>
+                <p>© 2014 BS3 UI Kit, All rights reserved</p>
+            </div>
+            <div class="col-md-4 footer-nav animated fadeInUp">
+                <h4>Menu —</h4>
+                <div class="col-md-6">
+                    <ul class="pages">
+                        <li><a href="#">Travel</a></li>
+                        <li><a href="#">Nature</a></li>
+                        <li><a href="#">Explores</a></li>
+                        <li><a href="#">Science</a></li>
+                        <li><a href="#">Advice</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="list">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contacts</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2 footer-social animated fadeInDown">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-ns animated fadeInRight">
+                <h4>Newsletter</h4>
+                <p>A rover wearing a fuzzy suit doesn’t alarm the real penguins</p>
+                <p>
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Search for...">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-envelope"></span></button>
+                    </span>
+                </div><!-- /input-group -->
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+<!--************** SCRIPTS ******************-->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script type="text/javascript" src = "script/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>

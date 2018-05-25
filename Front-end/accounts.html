@@ -15,10 +15,14 @@
 
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700i|Slabo+27px" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+
 </head>
 
-<body>
-    <!--    Naviga-->
+<body  ng-app="myApp" ng-controller="myCtrl">
+
+
+    <!--************** NAVIGATION ******************-->
 
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
@@ -34,141 +38,159 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-nav-demo">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#" class="left">Contact Us</a></li>
+                    <li ><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="contactus.html" class="left">Contact Us</a></li>
                     <li class="divider-vertical"></li>
 
-                    <li><a href="accounts.html" class="right">Login</a></li>
+                    <li ><a href="accounts.html" class="right ">Login</a></li>
                     <li><button type="button" class="btn navbar-btn btn-info">Sign up</button></li>
                 </ul>
             </div>
         </div>
     </nav>
 
+
+
+    <!--************** SIGNUP ******************-->
+
     <div class="container">
         <div class="row">
-            <div class="col-md-7">
+            <div class="col-md-7 col-sm-12">
                 <div class="signup">
                     <h3>Join our Community!</h3>
+                    <hr class="style5">
                     <div class="form-wrapper">
                       <form>
 
-                        <div class="form-item">
+                        <div class="form-item  ">
                           <label for="username"></label>
-                          <input type="username" name="username" required="required" placeholder="Username"></input>
-                        </div>
-
-                        <div class="form-item">
-                          <label for="email"></label>
-                          <input type="email" name="email" required="required" placeholder="Email Address"></input>
-                        </div>
-
-                        <div class="form-item">
-                          <label for="age"></label>
-                          <input type="date" name="age" required="required" placeholder="age"></input>
-                        </div>
-
-                        <div class="form-item">
-                          <label for="password"></label>
-                          <input type="password" name="password" required="required" placeholder="Password"></input>
-                        </div>
-
-                        <div class="form-item">
-                          <label for="password"></label>
-                          <input type="password" name="password" required="required" placeholder="Confirm Password"></input>
-                        </div>
-
-                        <div class="button-panel">
-                          <input type="submit" class="button" title="Sign up as a Lecturer" value="Join as a LECTURER"></input>
-                        </div>
-
-                        <div class="button-panel">
-                          <input type="submit" class="button" title="Sign up as a Student" value="Join as a STUDENT"></input>
-                        </div>
-                      </form>
-                  </div>
-                </div>
-            </div>
-            
-            
-            <div class=" col-md-5">
-                <div class="signin">
-                    <h4>Already a   <span class="changeFont"> Fun</span> Learner?</h4>
-                    <div class="form-wrapper">
-                      <form>
-                        <div class="form-item">
-                          <label for="username"></label>
-                          <input type="username" name="username" required="required" placeholder="Username"></input>
-                        </div>
-                        <div class="form-item">
-                          <label for="password"></label>
-                          <input type="password" name="password" required="required" placeholder="Password"></input>
-                        </div>
-                        <div class="button-panel">
-                          <input type="submit" class="button" title="Sign In" value="PRESS START!"></input>
-                        </div>
-                      </form>
-                      <div class="form-footer">
-                        <p><a href="#">Forgot password?</a></p>
+                          <input type="username" name="username" ng-model="username" placeholder="Username" required></input>
                       </div>
-                </div>
-            </div>
-        </div>
+
+                      <div class="form-item ">
+                          <label for="email"></label>
+                          <input type="email" name="email" ng-model="email" placeholder="Email Address" required></input>
+                      </div>
+                      <div class="form-item ">
+                          <label for="password"></label>
+                          <input type="password" name="password" ng-model="password" placeholder=" Password" required></input>
+                      </div>
+
+                      <div class="form-item ">
+                          <label for="password"></label>
+                          <input type="password" name="password" placeholder="Confirm Password" required></input>
+                      </div>
+                      
+
+
+                      <div class="row">
+                        <div class="button-panel1 col-sm-6">
+                          <input type="submit" class="button" title="Sign up as a Lecturer" ng-click="addLecturer()" value="I'm a LECTURER"><i class="fas fa-user-tie"></i></input>
+                      </div>
+
+                      <div class="button-panel2 col-sm-6">
+                          <input type="submit" class="button" title="Sign up as a Student" ng-click="addStudent()" value="I'm a STUDENT"></input>
+                      </div>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+
+
+
+
+
+  <!--************** SIGNIN ******************-->
+  <div class=" col-md-5 col-sm-12">
+    <div class="signin">
+        <h4>Already a   <span class="changeFont"> Fun</span> Learner?</h4>
+        <div class="form-wrapper">
+          <form>
+            <div class="form-item">
+              <label for="username"></label>
+              <input type="username" name="username" required="required" placeholder="Username"></input>
+          </div>
+          <div class="form-item">
+              <label for="password"></label>
+              <input type="password" name="password" required="required" placeholder="Password"></input>
+          </div>
+          <div class="button-panel">
+              <input type="submit" class="button" title="Sign In" value="PRESS START!"></input>
+          </div>
+      </form>
+      <div class="form-footer">
+        <p><a href="#">Forgot password?</a></p>
     </div>
 </div>
-    <!----------- Footer ------------>
-    <footer class="footer-bs">
-        <div class="row">
-            <div class="col-md-3 footer-brand animated fadeInLeft">
-                <h2>Lecture</h2>
-                <p>Suspendisse hendrerit tellus laoreet luctus pharetra. Aliquam porttitor vitae orci nec ultricies. Curabitur vehicula, libero eget faucibus faucibus, purus erat eleifend enim, porta pellentesque ex mi ut sem.</p>
-                <p>© 2014 BS3 UI Kit, All rights reserved</p>
-            </div>
-            <div class="col-md-4 footer-nav animated fadeInUp">
-                <h4>Menu —</h4>
-                <div class="col-md-6">
-                    <ul class="pages">
-                        <li><a href="#">Travel</a></li>
-                        <li><a href="#">Nature</a></li>
-                        <li><a href="#">Explores</a></li>
-                        <li><a href="#">Science</a></li>
-                        <li><a href="#">Advice</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <ul class="list">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Contacts</a></li>
-                        <li><a href="#">Terms & Condition</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-2 footer-social animated fadeInDown">
-                <h4>Follow Us</h4>
-                <ul>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Instagram</a></li>
+</div>
+</div>
+</div>
+</div>
+<!--             <h1 id="hello">Hello, {{name}}</h1>
+            <input id="id" type="text" ng-model="name" placeholder="Whats your name?" autofocus>
+            <input type="submit" class="button" ng-click="test()" title="Sign In" value="PRESS START!"></input> -->
+
+<!--************** FOOTER ******************-->
+<footer class="footer-bs">
+    <div class="row">
+        <div class="col-md-3 footer-brand animated fadeInLeft">
+            <h2>Lecture</h2>
+            <p>Suspendisse hendrerit tellus laoreet luctus pharetra. Aliquam porttitor vitae orci nec ultricies. Curabitur vehicula, libero eget faucibus faucibus, purus erat eleifend enim, porta pellentesque ex mi ut sem.</p>
+            <p>© 2014 BS3 UI Kit, All rights reserved</p>
+        </div>
+        <div class="col-md-4 footer-nav animated fadeInUp">
+            <h4>Menu —</h4>
+            <div class="col-md-6">
+                <ul class="pages">
+                    <li><a href="#">Travel</a></li>
+                    <li><a href="#">Nature</a></li>
+                    <li><a href="#">Explores</a></li>
+                    <li><a href="#">Science</a></li>
+                    <li><a href="#">Advice</a></li>
                 </ul>
             </div>
-            <div class="col-md-3 footer-ns animated fadeInRight">
-                <h4>Newsletter</h4>
-                <p>A rover wearing a fuzzy suit doesn’t alarm the real penguins</p>
-                <p>
-                    <div class="input-group">
-                      <input type="text" class="form-control" placeholder="Search for...">
-                      <span class="input-group-btn">
-                        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-envelope"></span></button>
-                      </span>
-                    </div><!-- /input-group -->
-                 </p>
+            <div class="col-md-6">
+                <ul class="list">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contacts</a></li>
+                    <li><a href="#">Terms & Condition</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
             </div>
         </div>
-    </footer>
+        <div class="col-md-2 footer-social animated fadeInDown">
+            <h4>Follow Us</h4>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3 footer-ns animated fadeInRight">
+            <h4>Newsletter</h4>
+            <p>A rover wearing a fuzzy suit doesn’t alarm the real penguins</p>
+            <p>
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Search for...">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-envelope"></span></button>
+                </span>
+            </div><!-- /input-group -->
+        </p>
+    </div>
+</div>
+</footer>
 
 
+
+
+<!--************** SCRIPTS ******************-->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script type="text/javascript" src = "script/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 
 </html>

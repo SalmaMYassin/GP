@@ -6,6 +6,7 @@
 package com.mycompany.lecture;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 
 /**
@@ -16,4 +17,6 @@ public class Lecture {
     private ArrayList<String> slides;
     private ArrayList<String> questions;
     private HashMap<Integer,Integer> mapQtoA;
+    private ArrayList<String> leaderboard;
+    private Date timeFrame;
 }
